@@ -95,6 +95,7 @@ def encode_image(image_path):
 
 st.title("Universal Polyglot - Ask anything in any language. We will answer that Google cannot (via Perplexity)")
 st.markdown("by Raghavan Muthuregunathan")
+st.markdown("- **Leveraging GPT4o's multi lingual, multi modal ability**")
 st.markdown("- You can ask anything in any language and either generate an image or get an answer")
 mode = st.radio("Choose Mode:", ("Perplexity Search Engine Mode", "Text to Image Output", "Image Input"))
 
