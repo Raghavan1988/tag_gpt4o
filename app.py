@@ -93,20 +93,20 @@ def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode("utf-8")
 
-st.title("Universal Polyglot")
+st.title("Universal Polyglot - Ask anything in any language. We will answer that Google cannot (via Perplexity)")
 st.markdown("by Raghavan Muthuregunathan")
 st.markdown("- You can ask anything in any language and either generate an image or get an answer")
-mode = st.radio("Choose Mode:", ("Image Mode", "Perplexity Search Engine Mode", "Image Input"))
+mode = st.radio("Choose Mode:", ("Perplexity Search Engine Mode", "Text to Image Output", "Image Input"))
 
 example1 = "(Tamil) இந்தியாவில் நெல் வயலில் விளையாடும் ஒரு சிறுவனும் பெண்ணும்"
-example2 = "(Hindi) भारत में शुष्क मौसम के दौरान कौन सी फसलें उगाई जानी चाहिए?"
+example2 = "(Arabic) ما هي المحاصيل التي يمكن زراعتها في شبه الجزيرة العربية خلال موسم الجفاف"
 example3 = "(indonesian) Apa yang terjadi pada bayinya?"
 example4 = ""
 st.markdown("- " + example1)
 st.markdown("- " + example2)
 st.markdown("- " + example3)
 
-input_text = st.text_area("Enter the question or describe for image generation (Use any Indian or Middle Eastern Language):")
+input_text = st.text_area("Enter the question or describe for image generation (Use any  language, say Indian or Middle Eastern Language):")
 
 if mode == "Image Input":
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
@@ -133,7 +133,7 @@ if st.button("Submit"):
         else:
             st.error("Please enter some text to translate or describe for image generation.")
     
-    elif mode == "Image Mode":
+    elif mode == "Text to Image Output":
         if input_text:
             image_url = generate_image(input_text)
             if image_url:
