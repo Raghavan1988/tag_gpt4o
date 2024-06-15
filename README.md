@@ -8,6 +8,7 @@ Universal Polyglot is a multilingual, multimodal application leveraging the capa
     Link: https://sched.co/1aBOj 
 </div>
 
+Streamlit application : [link](https://lablab-gpt4o.streamlit.app/)
 ## Features
 
 - **Multilingual Translation and Response**: Translate any text input into English, generate a response using Perplexity, and then translate the response back into the original language.
